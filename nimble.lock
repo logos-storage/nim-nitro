@@ -1,74 +1,85 @@
 {
-  "version": 1,
+  "version": 2,
   "packages": {
-    "upraises": {
-      "version": "0.1.0",
-      "vcsRevision": "ff4f8108e44fba9b35cac535ab63d3927e8fd3c2",
-      "url": "https://github.com/markspanbroek/upraises.git",
+    "results": {
+      "version": "0.5.1",
+      "vcsRevision": "df8113dda4c2d74d460a8fa98252b0b771bf1f27",
+      "url": "https://github.com/arnetheduck/nim-results",
       "downloadMethod": "git",
       "dependencies": [],
       "checksums": {
-        "sha1": "a0243c8039e12d547dbb2e9c73789c16bb8bc956"
+        "sha1": "a9c011f74bc9ed5c91103917b9f382b12e82a9e7"
+      }
+    },
+    "unittest2": {
+      "version": "0.2.3",
+      "vcsRevision": "845b6af28b9f68f02d320e03ad18eccccea7ddb9",
+      "url": "https://github.com/status-im/nim-unittest2",
+      "downloadMethod": "git",
+      "dependencies": [],
+      "checksums": {
+        "sha1": "6936b4e4676c9b37537d93f31cb8fc46f4ebaacb"
       }
     },
     "stew": {
-      "version": "0.1.0",
-      "vcsRevision": "6ad35b876fb6ebe0dfee0f697af173acc47906ee",
-      "url": "https://github.com/status-im/nim-stew.git",
+      "version": "0.2.0",
+      "vcsRevision": "79e4fa5a9d3374db17ed63622714d3e1094c7f34",
+      "url": "https://github.com/status-im/nim-stew",
       "downloadMethod": "git",
-      "dependencies": [],
+      "dependencies": [
+        "results",
+        "unittest2"
+      ],
       "checksums": {
-        "sha1": "46d58c4feb457f3241e3347778334e325dce5268"
+        "sha1": "26d477c735913b7daa1dab53dd74803c88209634"
+      }
+    },
+    "stint": {
+      "version": "0.8.1",
+      "vcsRevision": "1a2c661e3f50ff696b0b6692fab0d7bb2abf10cc",
+      "url": "https://github.com/status-im/nim-stint",
+      "downloadMethod": "git",
+      "dependencies": [
+        "stew",
+        "unittest2"
+      ],
+      "checksums": {
+        "sha1": "fe3c8b7b0484135294b8fb3dab5b1a030a08bddc"
       }
     },
     "nimcrypto": {
-      "version": "0.5.4",
-      "vcsRevision": "a5742a9a214ac33f91615f3862c7b099aec43b00",
+      "version": "0.6.2",
+      "vcsRevision": "dc07e3058c6904eef965394493b6ea99aa2adefc",
       "url": "https://github.com/cheatfate/nimcrypto",
       "downloadMethod": "git",
       "dependencies": [],
       "checksums": {
-        "sha1": "f76c87707cd4e96355b8bb6ef27e7f8b0aac1e08"
-      }
-    },
-    "secp256k1": {
-      "version": "0.5.2",
-      "vcsRevision": "5340cf188168d6afcafc8023770d880f067c0b2f",
-      "url": "https://github.com/status-im/nim-secp256k1.git",
-      "downloadMethod": "git",
-      "dependencies": [
-        "stew",
-        "nimcrypto"
-      ],
-      "checksums": {
-        "sha1": "ae9cbea4487be94a06653ffee075a7f1bd1e231e"
+        "sha1": "8e3e42530f54c8c312942a89640b7e0f687f33a5"
       }
     },
     "questionable": {
-      "version": "0.10.2",
-      "vcsRevision": "6018fd43e033d5a5310faa45bcaa1b44049469a4",
-      "url": "https://github.com/status-im/questionable.git",
+      "version": "0.10.15",
+      "vcsRevision": "82d90b67bcfb7f2e918b61dace2ff1a4ced60935",
+      "url": "https://github.com/markspanbroek/questionable",
       "downloadMethod": "git",
       "dependencies": [],
       "checksums": {
-        "sha1": "36a6c012637c7736a390e74a7f94667bca562073"
+        "sha1": "3238ff637c7b44d2fa8fcb839a8ded968e389de3"
       }
     },
-    "stint": {
-      "version": "0.0.1",
-      "vcsRevision": "036c71d06a6b22f8f967ba9d54afd2189c3872ca",
-      "url": "https://github.com/status-im/stint.git",
+    "upraises": {
+      "version": "0.1.0",
+      "vcsRevision": "d9f268db1021959fe0f2c7a5e49fba741f9932a0",
+      "url": "https://github.com/markspanbroek/upraises",
       "downloadMethod": "git",
-      "dependencies": [
-        "stew"
-      ],
+      "dependencies": [],
       "checksums": {
-        "sha1": "0f187a2115315ca898e5f9a30c5e506cf6057062"
+        "sha1": "176234f808b44a0be763df706ed634d6e8df17bb"
       }
     },
     "contractabi": {
-      "version": "0.4.5",
-      "vcsRevision": "df55276f1d7bed529cf8d423a5077ca8a2a2d4ca",
+      "version": "0.7.1",
+      "vcsRevision": "524bda044baecdf1ead4f179bdad2b8706ae3a5a",
       "url": "https://github.com/status-im/nim-contract-abi",
       "downloadMethod": "git",
       "dependencies": [
@@ -79,8 +90,22 @@
         "upraises"
       ],
       "checksums": {
-        "sha1": "11387226c5e355e207f587382e3bcca1cc5cf687"
+        "sha1": "c45b2abde354c731ed9cb3bf30a8fe0a444ed027"
+      }
+    },
+    "secp256k1": {
+      "version": "0.6.0.3.2",
+      "vcsRevision": "62e16b4dff513f1eea7148a8cbba8a8c547b9546",
+      "url": "https://github.com/status-im/nim-secp256k1",
+      "downloadMethod": "git",
+      "dependencies": [
+        "stew",
+        "nimcrypto"
+      ],
+      "checksums": {
+        "sha1": "443802551ed2f7ba273df38e06a18164dffa14c9"
       }
     }
-  }
+  },
+  "tasks": {}
 }
