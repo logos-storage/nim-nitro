@@ -1,7 +1,7 @@
 import ../basics
 import ../protocol
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 type
   SignedState* = object

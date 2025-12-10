@@ -3,7 +3,7 @@ import std/sets
 import std/hashes
 import ../basics
 
-push: {.upraises: [].}
+{.push raises: [].}
 
 type
   Nonces* = object

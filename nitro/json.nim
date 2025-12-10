@@ -8,7 +8,7 @@ import ./wallet/signedstate
 
 export signedstate
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 func `%`(value: Outcome | Allocation): JsonNode =
   type Base = distinctBase(typeof value)
@@ -37,7 +37,7 @@ func toJson*(payment: SignedState): string =
 
 {.pop.}
 
-push: {.upraises: [ValueError].}
+{.push raises: [ValueError].}
 
 func expectKind(node: JsonNode, kind: JsonNodeKind) =
   if node.kind != kind:
@@ -74,7 +74,7 @@ func initFromJson*(signature: var Signature, node: JsonNode, _: var string) =
 
 {.pop.}
 
-push: {.upraises: [].}
+{.push raises: [].}
 
 proc fromJson*(_: type SignedState, json: string): ?SignedState =
   try:

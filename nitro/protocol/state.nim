@@ -4,7 +4,7 @@ import ./channel
 import ./outcome
 import ./abi
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 export basics
 export channel

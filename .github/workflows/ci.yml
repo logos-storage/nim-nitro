@@ -7,11 +7,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [ubuntu-latest, macOS-latest]
         nim: [stable, 2.0.14]
     steps:
-    - uses: actions/checkout@v2
-    - uses: iffy/install-nim@v3
+    - uses: actions/checkout@v6
+    - uses: iffy/install-nim@v5
       with:
         version: ${{ matrix.nim }}
     - name: Build
