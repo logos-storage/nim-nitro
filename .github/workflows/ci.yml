@@ -18,6 +18,6 @@ jobs:
         nim-version: ${{matrix.nim}}
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Build
-      run: nimble install -y --maximumtaggedversions=2
+      run: nimble install -y
     - name: Test
       run: nimble test -y
