@@ -7,13 +7,16 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest]
+        os: [ubuntu-latest, macOS-latest, windows-latest]
         nim: [stable, 2.0.14]
     steps:
     - uses: actions/checkout@v6
-    - uses: iffy/install-nim@v5
       with:
-        version: ${{ matrix.nim }}
+        submodules: recursive
+    - uses: jiro4989/setup-nim-action@v2
+      with:
+        nim-version: ${{matrix.nim}}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Build
       run: nimble install -y --maximumtaggedversions=2
     - name: Test
