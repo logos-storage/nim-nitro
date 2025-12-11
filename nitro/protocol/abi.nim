@@ -1,7 +1,7 @@
 import pkg/contractabi
 import ../basics
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 export basics
 export contractabi

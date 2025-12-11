@@ -10,11 +10,14 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]
         nim: [stable, 2.0.14]
     steps:
-    - uses: actions/checkout@v2
-    - uses: iffy/install-nim@v3
+    - uses: actions/checkout@v6
       with:
-        version: ${{ matrix.nim }}
+        submodules: recursive
+    - uses: jiro4989/setup-nim-action@v2
+      with:
+        nim-version: ${{matrix.nim}}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Build
-      run: nimble install -y --maximumtaggedversions=2
+      run: nimble install -y
     - name: Test
       run: nimble test -y

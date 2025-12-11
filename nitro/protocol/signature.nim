@@ -1,11 +1,11 @@
 import pkg/secp256k1
-import pkg/nimcrypto
+import pkg/nimcrypto/keccak
 import pkg/stew/byteutils
 import ../basics
 import ../keys
 import ./state
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 export basics
 export keys

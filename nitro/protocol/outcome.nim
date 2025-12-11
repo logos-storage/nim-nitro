@@ -2,7 +2,7 @@ import pkg/nimcrypto
 import ../basics
 import ./abi
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 export basics
 

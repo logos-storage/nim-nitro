@@ -8,7 +8,7 @@ import ./balances
 import ./nonces
 import ./deref
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 export basics
 export keys

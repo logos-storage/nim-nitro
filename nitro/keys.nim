@@ -5,7 +5,7 @@ import ./basics
 export basics
 export toPublicKey
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 type
   EthPrivateKey* = SkSecretKey

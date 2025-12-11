@@ -3,7 +3,7 @@ import std/sequtils
 import ../basics
 import ../protocol
 
-push: {.upraises:[].}
+{.push raises: [].}
 
 export tables
 
